@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RAI AI</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 240px;
+  height: 240px;
+  border-radius: 55px;
+  background: linear-gradient(145deg, #111, #000);
+  border: 2px solid #fff;
+  box-shadow:
+    0 0 15px #fff,
+    0 0 40px #ffffff44,
+    inset 0 0 25px #ffffff22;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  animation: float 4s ease-in-out infinite,
+             glow 3s ease-in-out infinite;
+}
+
+.logo::before {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  border: 1px solid #ffffff66;
+  border-radius: 50%;
+  animation: rotate 12s linear infinite;
+}
+
+.logo::after {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border: 1px dashed #ffffff55;
+  border-radius: 50%;
+  animation: rotate 20s linear infinite reverse;
+}
+
+.mic {
+  font-size: 48px;
+  color: white;
+  text-shadow: 0 0 20px white;
+  z-index: 2;
+  animation: pulse 2s infinite;
+}
+
+.name {
+  color: white;
+  font-size: 46px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  margin-top: 12px;
+  z-index: 2;
+  text-shadow: 0 0 15px white;
+}
+
+.name span {
+  color: #aaa;
+}
+
+.subtitle {
+  color: #888;
+  font-size: 10px;
+  letter-spacing: 5px;
+  margin-top: 8px;
+  z-index: 2;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 15px #fff,
+                0 0 35px #ffffff22;
+  }
+  50% {
+    box-shadow: 0 0 30px #fff,
+                0 0 70px #ffffff66;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.7;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="app">
+  <div class="logo">
+    <div class="mic">◉</div>
+    <div class="name">R<span>Ai</span></div>
+    <div class="subtitle">AI ASSISTANT</div>
+  </div>
+</div>
+
+</body>
+</html>
